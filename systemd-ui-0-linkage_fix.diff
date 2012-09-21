@@ -1,0 +1,11 @@
+--- Makefile.am	2012-01-24 20:16:33.000000000 -0500
++++ Makefile.am.oden	2012-03-18 04:15:20.474636303 -0400
+@@ -61,7 +61,7 @@
+ systemd_gnome_ask_password_agent_CFLAGS = \
+ 	$(AM_CFLAGS) \
+ 	$(LIBNOTIFY_CFLAGS) \
+-	$(GTK_CFLAGS) \
++	$(GTK_CFLAGS) -lrt \
+ 	-Wno-unused-variable \
+ 	-Wno-unused-function \
+ 	-Wno-shadow \
