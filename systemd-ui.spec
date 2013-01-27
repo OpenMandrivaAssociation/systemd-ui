@@ -1,16 +1,16 @@
 Summary:	System and Service Manager UI for systemd
 Name:		systemd-ui
 Version:	1
-Release:	%mkrel 2
+Release:	3
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
 URL:		http://www.freedesktop.org/wiki/Software/systemd
 Source0:	http://www.freedesktop.org/software/systemd/systemd-ui-%{version}.tar.xz
 Patch0:		systemd-ui-0-linkage_fix.diff
 BuildRequires:	autoconf 
-BuildRequires:  automake 
-BuildRequires:  m4 
-BuildRequires:  libtool
+BuildRequires:	automake 
+BuildRequires:	m4 
+BuildRequires:	libtool
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gee-1.0)
 BuildRequires:	pkgconfig(gio-unix-2.0)
@@ -20,12 +20,13 @@ BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	vala >= 0.11
 BuildRequires:	xsltproc
 
-Requires:       polkit
-Requires:       systemd
+Requires:		polkit
+Requires:		systemd
 
-Obsoletes:      systemd-gtk < 45
-Provides:       systemd-gtk = %version-%release
-Provides:       systemadm = %version-%release
+Obsoletes:		systemd-gtk < 45
+Provides:		systemd-gtk = %version-%release
+Provides:		systemadm = %version-%release
+Obsoletes:		systemadm <= 0-2
 
 %description
 Graphical front-end for systemd
