@@ -1,15 +1,15 @@
 Summary:	System and Service Manager UI for systemd
 Name:		systemd-ui
 Version:	1
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
 URL:		http://www.freedesktop.org/wiki/Software/systemd
 Source0:	http://www.freedesktop.org/software/systemd/systemd-ui-%{version}.tar.xz
 Patch0:		systemd-ui-0-linkage_fix.diff
-BuildRequires:	autoconf 
-BuildRequires:	automake 
-BuildRequires:	m4 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	m4
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gee-1.0)
@@ -19,29 +19,19 @@ BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	vala >= 0.11
 BuildRequires:	xsltproc
-
-Requires:		polkit
-Requires:		systemd
-
-Obsoletes:		systemd-gtk < 45
-Provides:		systemd-gtk = %version-%release
-Provides:		systemadm = %version-%release
-Obsoletes:		systemadm <= 0-2
+Requires:	polkit
+Requires:	systemd
+Obsoletes:	systemd-gtk < 45
+Provides:	systemd-gtk = %{version}-%{release}
+Provides:	systemadm = %{version}-%{release}
+Obsoletes:	systemadm <= 0-3
 
 %description
 Graphical front-end for systemd
 
-It contains : 
+It contains :
 	* systemadm is a graphical frontend for the systemd system and service manager
           and allows introspection and control of systemd
-
-%files
-%{_bindir}/systemadm
-%{_bindir}/systemd-gnome-ask-password-agent
-%{_mandir}/man1/systemadm.*
-%{_datadir}/applications/systemadm.desktop
-
-#--------------------------------------------------------------------
 
 %prep
 
@@ -55,7 +45,6 @@ autoreconf -fi
 %make
 
 %install
-
 %makeinstall_std
 
 install -d %{buildroot}%{_datadir}/applications
@@ -70,6 +59,11 @@ Icon=development_tools_section
 Categories=GTK;Settings;System;X-Mageia-CrossDesktop;
 EOF
 
+%files
+%{_bindir}/systemadm
+%{_bindir}/systemd-gnome-ask-password-agent
+%{_mandir}/man1/systemadm.*
+%{_datadir}/applications/systemadm.desktop
 
 
 %changelog
