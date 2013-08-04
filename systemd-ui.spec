@@ -18,7 +18,7 @@ BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gee-1.0)
 BuildRequires:	pkgconfig(gio-unix-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	vala >= 0.11
 BuildRequires:	xsltproc
