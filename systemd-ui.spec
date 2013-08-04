@@ -1,12 +1,15 @@
 Summary:	System and Service Manager UI for systemd
 Name:		systemd-ui
-Version:	1
-Release:	4
+Version:	2
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
 URL:		http://www.freedesktop.org/wiki/Software/systemd
 Source0:	http://www.freedesktop.org/software/systemd/systemd-ui-%{version}.tar.xz
 Patch0:		systemd-ui-0-linkage_fix.diff
+Patch1:		0001-Add-missing-trailing-to-Categories-in-desktop-file.patch
+Patch2:		0002-systemadm-filter-on-slices-and-scopes-too.patch
+Patch3:		0003-gnome-ask-password-agent-report-GLib.Error-only-to-s.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	m4
@@ -37,6 +40,9 @@ It contains :
 
 %setup -q -n systemd-ui-%{version}
 %patch0 -p0
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 autoreconf -fi
