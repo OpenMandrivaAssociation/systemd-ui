@@ -1,7 +1,7 @@
 Summary:	System and Service Manager UI for systemd
 Name:		systemd-ui
 Version:	2
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
 URL:		http://www.freedesktop.org/wiki/Software/systemd
