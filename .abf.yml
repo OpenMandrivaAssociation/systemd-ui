@@ -1,4 +1,5 @@
 removed_sources:
   systemd-ui-1.tar.xz: 94484cf7998ef407f1dad42f920a9622be41c6cc
-sources:
   systemd-ui-2.tar.xz: a88bac655deea045984dc619810f4ef98032f570
+sources:
+  systemd-ui-3.tar.xz: ef848f29405785308170b81b319081a4f2ee69fe
