@@ -39,6 +39,9 @@ It contains :
 %patch0 p-1
 
 %build
+export CC=gcc
+export CXX=g++
+
 autoreconf -fi
 
 %configure
