@@ -12,7 +12,7 @@ BuildRequires:	automake
 BuildRequires:	m4
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(dbus-1)
-BuildRequires:	pkgconfig(gee-1.0)
+BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(gio-unix-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
