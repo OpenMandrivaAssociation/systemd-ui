@@ -7,6 +7,8 @@ Group:		System/Configuration/Boot and Init
 URL:		https://www.freedesktop.org/wiki/Software/systemd
 Source0:	http://www.freedesktop.org/software/systemd/systemd-ui-%{version}.tar.xz
 Patch0:		systemd-ui-0-linkage_fix.diff
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	m4
